@@ -30,10 +30,13 @@ COGS is **not** simply "what you bought this year." It is what you actually cons
 
 ### Why This Matters
 
-| If you buy ₹100 of goods and sell all of it | COGS = ₹100 (no inventory left) |
-|---------------------------------------------|----------------------------------|
-| If you buy ₹100 but keep ₹30 unsold | COGS = ₹70 (₹30 stays on Balance Sheet as asset) |
-| If you buy ₹100 but also sell ₹20 of old stock | COGS = ₹120 (old inventory cost flows into P&L) |
+| Situation | Numbers | COGS | Explanation |
+|-----------|---------|------|-------------|
+| Buy ₹100, sell all of it | Op=0, Purchase=100, Cl=0 | **₹100** | Nothing left unsold; full purchase = expense |
+| Buy ₹100, keep ₹30 unsold | Op=0, Purchase=100, Cl=30 | **₹70** | ₹30 stays on Balance Sheet; only ₹70 expensed |
+| Buy ₹100, sell only ₹20 of old stock (new goods unsold) | Op=20, Purchase=100, Cl=100 | **₹20** | New ₹100 is still on shelf (Closing Stock=100); only old ₹20 flows into P&L |
+
+> **Common misconception fixed:** In Case 3, COGS is ₹20 — NOT ₹120. The ₹100 new purchase cancels out because it sits in Closing Stock unsold. Only the old stock that left the shelf (₹20) becomes an expense. COGS = 20 + 100 − 100 = ₹20.
 
 ---
 
@@ -61,6 +64,31 @@ If Closing Stock < Opening Stock → Change in Inventory is **positive** → COG
 Method 1: 2341 + 3457 − 3163 = 2635 ✓
 Method 2: 3457 + (2341 − 3163) = 3457 − 822 = 2635 ✓
 ```
+
+### The Closing Stock Rule — Most Important Concept
+
+> **Whatever is NOT in Closing Stock was sold. Its cost goes into COGS.**
+> **Whatever IS in Closing Stock was NOT sold. Its cost stays on the Balance Sheet.**
+
+The formula does not care whether the goods came from this year's purchase or last year's old stock. It only asks:
+
+- What was available? → Opening Stock + Purchases
+- What is still here? → Closing Stock
+- What must have been sold? → The difference = COGS
+
+**Step-by-step for "Buy ₹100 new, sell only ₹20 old stock":**
+
+```
+What was available = Opening Stock (₹20) + Purchases (₹100) = ₹120
+What is still on shelf = Closing Stock = ₹100  ← the new goods, unsold
+What was sold = ₹120 − ₹100 = ₹20  ← only the old stock left the shelf
+
+COGS = 20 + 100 − 100 = ₹20  ✓
+```
+
+The ₹100 purchase and ₹100 closing stock cancel each other out completely — because the new goods never moved. Only the old ₹20 that left the shelf becomes an expense.
+
+**The wrong intuition to avoid:** "Selling old stock means COGS must be higher than purchases." That is only true if the new purchases also sit unsold AND the old stock was additional to the purchases. The formula always self-corrects through Closing Stock.
 
 ---
 
